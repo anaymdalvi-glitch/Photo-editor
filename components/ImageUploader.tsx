@@ -8,7 +8,7 @@ interface ImageUploaderProps {
 }
 
 const UploadIcon: React.FC = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
   </svg>
 );
@@ -37,7 +37,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, ori
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-      <h2 className="text-lg font-semibold mb-3 text-white">1. Upload Image</h2>
+      <h2 className="text-lg font-semibold mb-2 text-white">1. Upload Image</h2>
       {originalImage ? (
         <div className="relative group">
           <img src={`data:image/png;base64,${originalImage}`} alt="Original" className="w-full h-auto rounded-md object-cover" />
@@ -57,7 +57,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, ori
           onDragLeave={(e) => handleDragEvents(e, false)}
           onDragOver={(e) => handleDragEvents(e, true)}
           onDrop={handleDrop}
-          className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors duration-200 ${isDragging ? 'border-purple-500 bg-gray-700/50' : 'border-gray-600 hover:border-purple-400'}`}
+          className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors duration-200 ${isDragging ? 'border-purple-500 bg-gray-700/50' : 'border-gray-600 hover:border-purple-400'}`}
         >
           <input
             type="file"
